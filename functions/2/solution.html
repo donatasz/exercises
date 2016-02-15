@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Functions solution Nr. 2</title>
+</head>
+<body>
+
+<h1>Functions solution Nr. 2</h1>
+
+<script>
+
+  (function () {
+    'use strict';
+
+    var foo = "Hello";
+
+    (function () {
+      var bar = " World";
+      alert(foo + bar); // "Hello World"
+    })();
+
+    alert(foo + bar); // Uncaught ReferenceError: bar is not defined
+
+  }());
+
+</script>
+</body>
+</html>
