@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoisting solution Nr. 3</title>
+</head>
+<body>
+
+<h1>Hoisting solution Nr. 3</h1>
+
+<script>
+
+  (function () {
+    'use strict';
+
+    console.log(a(1)); // 39
+
+    function a(foo) {
+      if (foo > 20) {
+        return foo;
+      }
+      return b(foo + 2);
+    }
+
+    function b(foo) {
+      return c(foo) + 1;
+    }
+
+    function c(foo) {
+      return a(foo * 2);
+    }
+
+  }());
+
+</script>
+</body>
+</html>
