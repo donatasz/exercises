@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoisting solution</title>
+</head>
+<body>
+
+<h1>Hoisting solution</h1>
+
+<script>
+
+  (function () {
+    'use strict';
+
+    a; // undefined
+    b; // undefined
+    var a = b;
+    var b = 2;
+    console.log(a); // undefined
+    console.log(b); // 2
+
+  }());
+
+</script>
+</body>
+</html>

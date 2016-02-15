@@ -1,0 +1,13 @@
+{
+  "name": "exercises",
+  "version": "0.0.1",
+  "description": "JavaScript exercises.",
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Donatas Žukauskas",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^2.1.0"
+  }
+}
