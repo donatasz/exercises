@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoisting exercise Nr. 2</title>
+</head>
+<body>
+
+<h1>Hoisting exercise Nr. 2</h1>
+
+<script>
+
+  (function () {
+    'use strict';
+
+    var a = b();
+    var c = d();
+    a; // ???
+    c; // ???
+
+    function b() {
+      return c;
+    }
+
+    var d = function() {
+    	return b();
+    }
+
+  }());
+
+</script>
+</body>
+</html>
