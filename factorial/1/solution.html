@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial solution Nr. 1</title>
+</head>
+<body>
+
+<h1>Factorial solution Nr. 1</h1>
+
+<script>
+
+  (function () {
+    'use strict';
+
+    // Write a function to calculate factorial iteratively
+    // The factorial of a number n is calculated by multiplying 1 * 2 * 3 * ... n
+    // Factorial of 0 is equal to 1 and it is only calculated for non-negative integers
+
+    function myFactorial(number) {
+      var numbers = [],
+        factorial;
+
+      if (number < 0) {
+        console.error('Number must be > or = to 0.');
+        return;
+      }
+
+      if (number === 0 || number === 1) {
+        return 1;
+      }
+
+      for (var i = 0; i < number; i+=1) {
+        numbers.push(number - i);
+      }
+
+      factorial = numbers.reduce(function (a, b) {
+        return a * b;
+      });
+
+      return factorial;
+    }
+
+     console.log(myFactorial(7));
+
+    //  Calculating factorial using while
+    //  Recommended using i+=1 and i-=1 for increment/decrement
+    //--------------------------------------------------------
+
+    function factorial(number) {
+
+      if (number < 0) {
+        console.error('Number must be > or = to 0.');
+        return;
+      }
+
+      if (number === 0 || number === 1) {
+        return 1;
+      }
+
+      var tmp = number;
+      while (number-- > 2) {
+        tmp *= number;
+      }
+      return tmp;
+    }
+
+    console.log(factorial(7));
+
+    function sFact(number) {
+
+      if (number < 0) {
+        console.error('Number must be > or = to 0.');
+        return;
+      }
+
+      if (number === 0 || number === 1) {
+        return 1;
+      }
+
+      var rval = 1;
+      for (var i = 2; i <= number; i++)
+        rval = rval * i;
+      return rval;
+
+    }
+
+    console.log(sFact(7));
+
+  }());
+
+</script>
+</body>
+</html>
