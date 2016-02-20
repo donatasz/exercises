@@ -13,9 +13,9 @@
   (function () {
     'use strict';
 
-    var add = function (x, y) {
+    function add(x, y) {
       return x + y;
-    };
+    }
 
     console.log(add(2, 5));
 
@@ -25,10 +25,10 @@
     'use strict';
 
     // First-class function and closure
-    var add = function(x) {
+    function add(x) {
       return function(y) {
         return x + y;
-      }};
+      }}
 
     console.log(add(2)(5));
 
